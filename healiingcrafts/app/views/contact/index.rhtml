@@ -1,0 +1,16 @@
+<h2>Contact Us</h2>
+<div class="adminPanel">
+<%= form_tag :action => 'send_message' %>
+	<p>
+		<%= label_tag(:from, 'Email Address :', :class => 'label') %>
+		<%= text_field_tag(:from, '') %>
+	</p>
+	<p>
+		<%= label_tag(:body, 'Body :', :class => 'label') %>
+		<%= text_area_tag(:body, '', {:rows => 10, :cols => 30}) %>
+	</p>
+	<p>				
+		<%= submit_tag "send" %>
+	</p>
+<%= form_tag %>
+</div>

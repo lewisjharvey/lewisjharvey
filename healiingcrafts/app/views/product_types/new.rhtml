@@ -1,0 +1,13 @@
+<h2>New Product Type</h2>
+<div class="adminPanel">
+<% form_for(@product_type) do |f| %>
+  	<%= f.error_messages %>
+	<p>
+		<%= f.label :name, ('Name') %>
+		<%= f.text_field :name %>
+	</p>
+  	<p>
+    	<%= f.submit "Create" %> or <%= link_to 'cancel', product_types_path %>
+  	</p>
+<% end %>
+</div>

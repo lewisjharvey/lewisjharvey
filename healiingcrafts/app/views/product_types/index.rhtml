@@ -1,0 +1,19 @@
+<h2>Product Types</h2>
+<%= flash[:notice] %>
+<div class="dataGrid myGrid">
+<table border="0">
+	<tr>
+		<th class="first">Name</th>
+		<th class="last">Action</th>
+	</tr>
+	<% for product_type in @product_types %>
+  	<tr>
+		<td><%= product_type.name %></td>
+    	<td><%= link_to 'Edit', edit_product_type_path(product_type) %>&nbsp;<%= link_to 'Delete', product_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</tr>
+	<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add new', new_product_type_path %>

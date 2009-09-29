@@ -1,0 +1,25 @@
+<h2>New Product</h2>
+<div class="adminPanel">
+<% form_for(@product) do |f| %>
+  	<%= f.error_messages %>
+	<p>
+		<%= f.label :product_name, ('Name :'), :class => 'label' %>
+		<%= f.text_field :product_name, :class => 'textbox' %>
+	</p>
+	<p>
+		<%= f.label :description, ('Description :'), :class => 'label' %>
+		<%= f.text_area :description, :rows => 10, :class => 'textbox' %>
+	</p>
+	<p>
+		<%= f.label :product_type_id, ('Category :'), :class => 'label' %>
+		<%= f.select(:product_type_id, ProductType.find(:all, :order => "name").collect {|t| [t.name, t.id]}, :class => 'textbox')  %>
+	</p>
+	<p>
+		<%= f.label :price, ('Price (£) :'), :class => 'label' %>
+		<%= f.text_field :price, :class => 'textbox' %>
+	</p>
+  	<p>
+    	<%= f.submit "Create" %> or <%= link_to 'cancel', products_path %>
+  	</p>
+<% end %>
+</div>

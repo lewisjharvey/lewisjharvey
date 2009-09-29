@@ -1,0 +1,23 @@
+<h2>Products</h2>
+<%= flash[:notice] %>
+<div class="dataGrid myGrid">
+<table border="0">
+	<tr>
+		<th class="first">Name</th>
+		<th>Description</th>
+		<th>Price (£)</th>
+		<th class="last">Action</th>
+	</tr>
+	<% for product in @products %>
+  	<tr>
+		<td><%= product.product_name %></td>
+		<td><%= product.description %></td>	
+		<td><%= number_to_currency(product.price, :unit => "£") %></td>
+    	<td><%= link_to 'Edit', edit_product_path(product) %>&nbsp;<%= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</tr>
+	<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add new', new_product_path %>

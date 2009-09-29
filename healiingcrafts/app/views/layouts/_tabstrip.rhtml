@@ -1,0 +1,26 @@
+<%
+case controller.controller_name
+when 'products'
+	if controller.action_name == 'index'
+		tab = 'home'
+	else
+		tab = 'products'
+	end
+when 'about'
+	tab = 'about'
+when 'contact'
+	tab = 'contact'
+else
+	tab = 'products'
+end
+%>
+
+
+<div id="links">
+    <ul>
+      <li<%= tab == 'home' ? ' class="first selected"' : ' class="first"' %>><%= link_to 'Home', :controller => 'products', :action => 'index' %></li>
+      <li<%= tab == 'about' ? ' class="selected"' : '' %>><%= link_to 'About Us', :controller => 'about', :action => 'index' %></li>
+      <li<%= tab == 'products' ? ' class="selected"' : '' %>><%= link_to 'Products', :controller => 'products', :action => 'list' %></li>
+      <li<%= tab == 'contact' ? ' class="selected"' : '' %>><%= link_to 'Contact Us', :controller => 'contact', :action => 'index' %></li>
+    </ul>
+  </div>
