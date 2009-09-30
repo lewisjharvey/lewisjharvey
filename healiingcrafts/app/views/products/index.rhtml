@@ -1,10 +1,1 @@
-<div id="leftbar">
-	<% ProductType.find(:all).each do |t| %>
-		<div class="productTypeContainer">
-			<%= link_to(image_tag("/images/category_images/" + t.name + ".jpg"), :action => "list") %>
-		</div>
-	<% end %>
-</div>
-<div id="rightbar">
-	<%= render :partial => 'layouts/whats_new' %>
-</div>
+LIst of productions

@@ -12,16 +12,16 @@
 ActiveRecord::Schema.define(:version => 20090707170420) do
 
   create_table "product_types", :force => true do |t|
-    t.string   "name",       :limit => 100, :default => "", :null => false
+    t.string   "name",       :limit => 100, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "products", :force => true do |t|
-    t.string   "product_name",    :limit => 100, :default => "", :null => false
-    t.integer  "product_type_id", :limit => 11,                  :null => false
-    t.string   "description",                    :default => "", :null => false
-    t.float    "price",                                          :null => false
+    t.string   "product_name",    :limit => 100, :null => false
+    t.integer  "product_type_id", :limit => 11,  :null => false
+    t.string   "description",                    :null => false
+    t.float    "price",                          :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
