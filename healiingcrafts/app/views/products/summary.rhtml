@@ -1,7 +1,7 @@
 <div id="leftbar">
 	<% ProductType.find(:all).each do |t| %>
 		<div class="productTypeContainer">
-			<%= link_to(image_tag("/images/category_images/" + t.name + ".jpg"), :action => "list") %>
+			<%= link_to(image_tag("/images/category_images/" + t.name + ".jpg"), :action => "index", :product_type_id => t.id) %>
 		</div>
 	<% end %>
 </div>

@@ -10,8 +10,8 @@ development:
   database: healingcrafts_development
   username: lewisharvey
   password: Fitzroyrobin
-  #socket: /tmp/mysql.sock
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /tmp/mysql.sock
+  #socket: /var/run/mysqld/mysqld.sock
 
   # Connect on a TCP socket.  If omitted, the adapter will connect on the
   # domain socket given by socket instead.

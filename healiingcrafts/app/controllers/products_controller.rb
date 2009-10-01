@@ -1,5 +1,10 @@
 class ProductsController < ApplicationController
   def index
+    if !params[:product_type_id]
+      @products = Product.find(:all, :order => 'product_name')
+    else
+      @products = Product.find(:all, :conditions => ["product_type_id = :product_type_id", { :product_type_id => params[:product_type_id] }], :order => 'product_name')
+    end
   end
 
   def summary
@@ -7,10 +12,6 @@ class ProductsController < ApplicationController
   
   def new
     @product = Product.new
-  end
-  
-  def list
-    @products = Product.find_by_product_type(params[:product_type_id], :order => 'product_name')
   end
   
   def edit
