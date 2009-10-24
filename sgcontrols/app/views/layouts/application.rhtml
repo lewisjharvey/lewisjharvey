@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="Author" content="SG Controls" />
+	<meta name="Robots" content="index,follow" />
+	<meta name="Description" content="SG-Controls -  Consultancy / Design / Commissioning / Service" />
+	<meta name="Keywords" content="sg controls, controls, steve goldspink" />
+	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "scaffold" %>
+	<%= javascript_include_tag "jquery-1.2.1.min.js" %>
+	<%= javascript_include_tag "menu.js" %>
+	<title>SG Controls & Integration Ltd</title>
+	<!--[if lt IE 8]>
+   <style type="text/css">
+   li a {display:inline-block;}
+   li a {display:block;}
+   </style>
+   <![endif]-->
+</head>
+<body>
+		<div id="pageContainer">
+			<div id="pageContent">
+				<div id="pageHeader">
+					<div id="logo"></div>
+					<div id="bannerPicture" class="<%= generate_banner_class %>"></div>
+				</div>
+
+				<div id="navigation">
+					<%= render :partial => 'layouts/menu' %>
+				</div>
+
+				<div id="mainContent">	
+					<%= @content_for_layout %>
+				</div>
+
+				<div id="footer">
+					<div class="copyright">
+						Copyright &copy; 2009 <a href="http://www.sg-controls.co.uk">SG Controls & Integration Ltd</a> | <%= link_to "Privacy Statement", :action => "privacy" %>
+					</div>
+					<div id="slogan">
+						<div class="companyName">SG Controls & Integration Limited</div>
+						<div class="companySlogan">Design | Consultancy | Commissioning | Service</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,320 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 0.7em;
+	background: #E7E7E7;
+}
+
+a {
+	text-decoration: none;
+	color: #B60400;
+}
+
+a:hover {
+	color: #808080;
+}
+
+a img {
+	border: 0;
+}
+
+h3 {
+	font-size: 1.3em;
+	margin: 0 0 5px 0;
+	padding: 2px 0px 0px 0px;
+	border-bottom: 2px solid #eee;
+}
+
+.blue {
+	color: #286ea0;
+}
+
+#pageContainer { 
+	width: 760px;
+	margin: 0 auto;
+	height: 6200px;
+	padding: 6px 10px 0px 10px;
+	background: url(/images/bg.gif) no-repeat;
+}
+
+#pageContent {
+	padding: 9px 4px 0 2px;
+	color: #303030;
+	width: 736px;
+	
+}
+
+#pageHeader {
+	clear: both;
+	text-align: right;
+	margin: 0px 0 3px 0;
+	height: 150px;
+	border-bottom: 2px solid #eee;
+	background: #FFF url(/images/fade2.gif) repeat-x;
+	color: #808080;
+}
+
+#logo {
+	float: left;
+	width: 150px;
+	height: 150px;
+	background: url(/images/logo_small.png) 18px center no-repeat;
+}
+
+#navigation {
+	clear: left;
+	float: left;
+	width: 150px;
+	margin: 0 0 8px 0;
+	padding: 0;
+	font-size: 0.9em;
+}
+
+#navigation ul.menu {	
+	list-style: none;
+	width: 150px;
+	margin: 0 0 3px 0;
+	padding: 0;
+	font-size: 1.1em;
+	border-right: 2px solid #ccc;
+}	
+
+#navigation ul.submenu 
+{
+	list-style: none;
+	font-size: 1.1em;
+	padding: 0;
+	margin: 0 0 3px 0;
+}
+
+#navigation li a {
+	font-size: 9pt;
+	font-weight: bold;
+	text-align: right;
+	height: 17px;
+	text-decoration: none;
+	color: #333333;
+	display: block;
+	padding: 1px 10px 0 10px;
+	background: #fff;
+	border-bottom: 1px dotted #ccc;
+}
+
+#navigation ul.submenu li a
+{
+	color: #777777;
+}
+
+#navigation li {
+	margin-bottom: 4px;
+	padding: 0 5px 0 10px;
+}	
+	
+#navigation li a:hover {
+	color: #502E92;
+}
+
+#knx_partner_logo {
+	top: 366px;
+	position: absolute;
+	margin: 100px 0px 0px 13px;
+}
+
+#infobox {
+	border: 1px solid #ccc;
+	background: #f4f4f4;
+	padding: 3px;
+	margin-top: 5px;
+}
+
+div.bannerImage {
+	margin:  0 0 0 155px;
+	line-height: 1.4em;
+	height: 146px;
+	width: 581px;
+}
+
+div.bannerImage.home 
+{
+	background: url(/images/banners/home.jpg) left center repeat-x;
+}
+
+div.bannerImage.about 
+{
+	background: url(/images/banners/about.jpg) left center repeat-x;
+}
+
+div.bannerImage.knowledge 
+{
+	background: url(/images/banners/knowledge.jpg) left center repeat-x;
+}
+
+div.bannerImage.solutions 
+{
+	background: url(/images/banners/solutions.jpg) left center repeat-x;
+}
+
+div.bannerImage.commercial 
+{
+	background: url(/images/banners/commercial.jpg) left center repeat-x;
+}
+
+div.bannerImage.residential 
+{
+	background: url(/images/banners/residential.jpg) left center repeat-x;
+}
+
+div.bannerImage.technology 
+{
+	background: url(/images/banners/technology.jpg) left center repeat-x;
+}
+
+div.bannerImage.services 
+{
+	background: url(/images/banners/services.jpg) left center repeat-x;
+}
+
+div.bannerImage.commercial 
+{
+	background: url(/images/banners/commercial.jpg) left center repeat-x;
+}
+
+div.bannerImage.residential 
+{
+	background: url(/images/banners/residential.jpg) left center repeat-x;
+}
+
+div.bannerImage.consultancy 
+{
+	background: url(/images/banners/consultancy.jpg) left center repeat-x;
+}
+
+div.bannerImage.projects 
+{
+	background: url(/images/banners/projects.jpg) left center repeat-x;
+}
+
+div.bannerImage.installation 
+{
+	background: url(/images/banners/installation.jpg) left center repeat-x;
+}
+
+div.bannerImage.maintenance 
+{
+	background: url(/images/banners/maintenance.jpg) left center repeat-x;
+}
+
+div.bannerImage.integration 
+{
+	background: url(/images/banners/integration.jpg) left center repeat-x;
+}
+
+div.bannerImage.partners 
+{
+	background: url(/images/banners/partners.jpg) left center repeat-x;
+}
+
+div.bannerImage.contact 
+{
+	background: url(/images/banners/contact.jpg) left center repeat-x;
+}
+
+div.bannerImage.links 
+{
+	background: url(/images/banners/links.jpg) left center repeat-x;
+}
+
+#mainContent {
+	margin: 0 0px 20px 150px;
+	padding: 5px;
+	line-height: 1.6em;
+	text-align: left;
+	color: #5D5D5D;
+	border-left: 2px solid #eee;
+	min-height: 350px;
+}
+
+#mainContent a
+{
+	color: #303030;
+	text-decoration: underline;
+}
+
+#mainContent a:hover
+{
+	color: #B60400;
+	text-decoration: none;
+}
+
+#mainContent p {
+	padding: 0;
+}
+
+#mainContent h3
+{
+	display: block;
+	text-align: right;
+}
+
+#mainContent img.logo {
+	margin: 0px 10px;
+}
+
+.vcenter {
+  min-height: 12em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.copyright {
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	padding-left: 10px;
+}
+
+#slogan
+{
+	text-align: right;
+	float: right;
+}
+
+#slogan div.companyName
+{
+	font-size: 14px;
+	font-weight: bold;
+	font-family: arial;
+	width: 400px;
+	margin: 0 auto 0;
+	letter-spacing: 3px;
+}
+
+#slogan div.companySlogan
+{
+	color: #502E92;
+	width: 400px;
+	margin: 0 auto 0;
+	letter-spacing: 1px;
+}
+
+#footer {
+	clear: both;
+	color: #808080;
+	background: #FFF;
+	font-size: 0.8em;
+	text-align: left;
+	padding: 9px 10px 9px 0;
+	margin: 10px 5px 10px 5px;
+	border: 1px solid #ccc;
+	height: 30px;
+}
+
+#footer a {
+	text-decoration: underline;
+	color: #3A6794;
+}
+
+#footer a:hover {
+	color: #000;
+}

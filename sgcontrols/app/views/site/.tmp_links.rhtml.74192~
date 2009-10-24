@@ -1,0 +1,17 @@
+<h3>links</h3>
+<p>Here you find links to websites of interest for people in the building controls and building services industry.</p>
+
+<strong>Technical</strong>
+<p>
+<%= link_to "www.BACnetassociation.org (BACnet® International)", "http://www.BACnetassociation.org", :popup => true %><br />
+<%= link_to "www.dali-ag.org (Digital Addressable Lighting Interface)", "http://www.dali-ag.org", :popup => true %><br />
+<%= link_to "www.enocean.com (Enocean® Self-powered Green, Smart, Wireless solutions)", "http://www.enocean.com", :popup => true %><br />
+<%= link_to "www.knx.org (KNX® Association)", "http://www.knx.org", :popup => true %><br />
+<%= link_to "www.lonmark.org (LONMARK® International)", "http://www.lonmark.org", :popup => true %><br />
+<%= link_to "www.m-bus.com (M-Bus information)", "http://www.m-bus.com", :popup => true %>
+</p>
+<strong>Publications</strong>
+<p>
+<%= link_to "www.cibse.org (Chartered Institute of Building Services Engineers)", "http://www.cibse.org", :popup => true %><br />
+<%= link_to "www.lmimagazine.com (LonMark® International Magazine)", "http://www.lmimagazine.com", :popup => true %>
+</p>

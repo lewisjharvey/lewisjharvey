@@ -1,0 +1,35 @@
+<ul id="navigationMenu" class="menu collapsible">
+	<li><%= link_to "home", :controller => "site", :action => "index" %></li>
+	<li><%= link_to "about", :controller => "site", :action => "about" %></li>
+	<li><%= link_to "knowledge", :controller => "site", :action => "knowledge" %></li>
+	<li><%= link_to "solutions", :controller => "site", :action => "solutions" %>
+		<ul id="solutionsMenu" class="submenu">
+			<li><%= link_to "commercial", :controller => "site", :action => "commercial" %></li>
+			<li><%= link_to "residential", :controller => "site", :action => "residential" %></li>
+		</ul>
+	</li>
+	<li><%= link_to "technology", :controller => "site", :action => "technology" %>
+		<ul id="technologyMenu" class="submenu">
+			<li><%= link_to "Lonworks", :controller => "site", :action => "lonworks" %></li>
+			<li><%= link_to "KNX", :controller => "site", :action => "knx" %></li>
+			<li><%= link_to "DALI", :controller => "site", :action => "dali" %></li>
+			<li><%= link_to "wireless", :controller => "site", :action => "wireless" %></li>
+			<li><%= link_to "other", :controller => "site", :action => "other" %></li>
+		</ul>
+	</li>
+	<li><%= link_to "services", :controller => "site", :action => "services" %>
+		<ul id="servicesMenu" class="submenu">
+			<li><%= link_to "consultancy", :controller => "site", :action => "consultancy" %></li>
+			<li><%= link_to "projects", :controller => "site", :action => "projects" %></li>
+			<li><%= link_to "installation", :controller => "site", :action => "installation" %></li>
+			<li><%= link_to "maintenance", :controller => "site", :action => "maintenance" %></li>
+			<li><%= link_to "integration", :controller => "site", :action => "integration" %></li>
+		</ul>
+	</li>
+	<li><%= link_to "contact", :controller => "site", :action => "contact" %></li>
+	<li><%= link_to "links", :controller => "site", :action => "links" %></li>
+</ul>
+<div id="knx_partner_logo">
+	<%= image_tag("/images/knx_partner_logo.png") %>
+</div>
+
