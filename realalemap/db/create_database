@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mysql -u root < create_database.sql
+rake db:migrate
