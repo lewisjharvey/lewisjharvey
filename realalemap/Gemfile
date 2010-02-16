@@ -11,6 +11,7 @@ gem "rails", "3.0.0.beta"
 # Rails has selected sqlite3.
 #gem "sqlite3-ruby", :require => "sqlite3"
 gem "mysql"
+gem "twitter", :require => "twitter"
 
 ## Bundle the gems you use:
 # gem "bj"

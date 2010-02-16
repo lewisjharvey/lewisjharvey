@@ -7,4 +7,46 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+require 'tmpdir'
+require 'yaml'
+
 Rails::Application.load_tasks
+
+task :pollTwitterAccount => :environment do
+	# Setup the twitter account
+	#tweet = YAML::load(File.open('twitter.yml'))
+	#@twitter = Twitter::Base.new(tweet['username'], tweet['password'])
+	
+	# If the seed doesn't exist, get the last post to stat from
+	logger = RAILS_DEFAULT_LOGGER
+	log_prefix = lambda {"[INBOX #{Process.pid}] [#{Time.now.strftime('%d-%m-%Y %H:%M:%S')}]"}
+	
+	tmp_file = File.join("#{RAILS_ROOT}/tmp", 'twitter_seed')
+	if File.file?(tmp_file)
+    logger.info "File Exists: " + tmp_file
+		last_id = File.read(tmp_file)    
+	else
+		last_id = 0
+	end
+	logger.info "Last Id: " + last_id.to_s
+	# Hack for max count
+	max_id = Twitter::Search.new.fetch().results.last.id
+	timeline = Twitter::Search.new.to('realalemap').since(last_id).max(max_id).fetch()
+	logger.info "Results: " + timeline.results.count.to_s
+	timeline.results.each { |status|
+		d = DrinkReport.new
+		d.from_user = status.from_user
+		d.text = status.text
+		d.twitter_id = status.id
+		d.save
+		logger.info "Added: " + status.text
+	}
+	# Delete the contents of the file
+	if timeline.results.count > 0
+		f = File.open(tmp_file, 'w+')
+		f.truncate(0)
+		f.write(timeline.results.last.id)
+		f.close		
+		logger.info "LastId To File: " + timeline.results.last.id.to_s
+	end
+end
