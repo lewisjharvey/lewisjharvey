@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mysql -u root --password=beanish < create_database.sql
-rake db:migrate
