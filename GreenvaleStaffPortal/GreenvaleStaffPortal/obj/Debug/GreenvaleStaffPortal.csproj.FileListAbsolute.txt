@@ -1,0 +1,7 @@
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\bin\GreenvaleStaffPortal.dll
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\bin\GreenvaleStaffPortal.pdb
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\obj\Debug\GreenvaleStaffPortal.dll
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\obj\Debug\GreenvaleStaffPortal.pdb
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\bin\EntityFramework.dll
+D:\Projects\lewisjharvey\GreenvaleStaffPortal\GreenvaleStaffPortal\bin\EntityFramework.xml

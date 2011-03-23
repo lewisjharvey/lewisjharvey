@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GreenvaleStaffPortalModelsStoreContainer" CdmEntityContainer="StaffPortalEntities">
+    <EntitySetMapping Name="LoggedCalls">
+      <EntityTypeMapping TypeName="GreenvaleStaffPortal.Models.LoggedCall">
+        <MappingFragment StoreEntitySet="LoggedCalls">
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="CallNo" ColumnName="CallNo" />
+          <ScalarProperty Name="HowMany" ColumnName="HowMany" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Caller" ColumnName="Caller" />
+          <ScalarProperty Name="System" ColumnName="System" />
+          <ScalarProperty Name="SubSystem" ColumnName="SubSystem" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="DateCalled" ColumnName="DateCalled" />
+          <ScalarProperty Name="TimeCalled" ColumnName="TimeCalled" />
+          <ScalarProperty Name="LoggedBy" ColumnName="LoggedBy" />
+          <ScalarProperty Name="CallNotes" ColumnName="CallNotes" />
+          <ScalarProperty Name="PassedOn_" ColumnName="PassedOn?" />
+          <ScalarProperty Name="PassedTo" ColumnName="PassedTo" />
+          <ScalarProperty Name="PassedToDate" ColumnName="PassedToDate" />
+          <ScalarProperty Name="PassedToTime" ColumnName="PassedToTime" />
+          <ScalarProperty Name="Solved_" ColumnName="Solved?" />
+          <ScalarProperty Name="SolvedBy" ColumnName="SolvedBy" />
+          <ScalarProperty Name="SolvedDate" ColumnName="SolvedDate" />
+          <ScalarProperty Name="SolvedTime" ColumnName="SolvedTime" />
+          <ScalarProperty Name="Solved_Notes" ColumnName="Solved Notes" />
+          <ScalarProperty Name="Duration_in_Hours" ColumnName="Duration in Hours" />
+          <ScalarProperty Name="C24Hr_Support_Call" ColumnName="24Hr Support Call" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Progress_Notes" ColumnName="Progress Notes" />
+          <ScalarProperty Name="Ext_Company" ColumnName="Ext Company" />
+          <ScalarProperty Name="Ext_Support_Call_" ColumnName="Ext Support Call?" />
+          <ScalarProperty Name="Ext_Reference" ColumnName="Ext Reference" />
+          <ScalarProperty Name="Date_of_24Hr_Call" ColumnName="Date of 24Hr Call" />
+          <ScalarProperty Name="Time_of_24Hr_Call" ColumnName="Time of 24Hr Call" />
+          <ScalarProperty Name="Duration_of_24HrCall_Minutes" ColumnName="Duration of 24HrCall_Minutes" />
+          <ScalarProperty Name="Call_Duration__Mins_" ColumnName="Call Duration (Mins)" />
+          <ScalarProperty Name="CallMemo" ColumnName="CallMemo" />
+          <ScalarProperty Name="SolvedMemo" ColumnName="SolvedMemo" />
+          <ScalarProperty Name="ProgressMemo" ColumnName="ProgressMemo" />
+          <ScalarProperty Name="GV_Server" ColumnName="GV Server" />
+          <ScalarProperty Name="Call_Priority" ColumnName="Call Priority" />
+          <ScalarProperty Name="Possible_Training_Required_" ColumnName="Possible Training Required?" />
+          <ScalarProperty Name="Spares_Repairs_Onsite_Reqd_" ColumnName="Spares_Repairs Onsite Reqd?" />
+          <ScalarProperty Name="Development_Required_" ColumnName="Development Required?" />
+          <ScalarProperty Name="Fax_Required_" ColumnName="Fax Required?" />
+          <ScalarProperty Name="Fax_No_" ColumnName="Fax No_" />
+          <ScalarProperty Name="Site_Procedures_No_Followed" ColumnName="Site Procedures No Followed" />
+          <ScalarProperty Name="Caller_Telephone_No_" ColumnName="Caller Telephone No_" />
+          <ScalarProperty Name="Follow_Up_Reqd_" ColumnName="Follow Up Reqd?" />
+          <ScalarProperty Name="Follow_Up_By" ColumnName="Follow Up By" />
+          <ScalarProperty Name="Follow_Up_Completed_" ColumnName="Follow Up Completed?" />
+          <ScalarProperty Name="Follow_Up_Completed_By" ColumnName="Follow Up Completed By" />
+          <ScalarProperty Name="Follow_Up_Completion_Date" ColumnName="Follow Up Completion Date" />
+          <ScalarProperty Name="FollowUpMemo" ColumnName="FollowUpMemo" />
+          <ScalarProperty Name="Follow_Up_Notes" ColumnName="Follow Up Notes" />
+          <ScalarProperty Name="Call_Status" ColumnName="Call Status" />
+          <ScalarProperty Name="Master_" ColumnName="Master?" />
+          <ScalarProperty Name="Linked_to_Master_Log_No_" ColumnName="Linked to Master Log No_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LookupCodes">
+      <EntityTypeMapping TypeName="GreenvaleStaffPortal.Models.LookupCode">
+        <MappingFragment StoreEntitySet="LookupCodes">
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="RecType" ColumnName="RecType" />
+          <ScalarProperty Name="System" ColumnName="System" />
+          <ScalarProperty Name="SubSystem" ColumnName="SubSystem" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email Address" />
+          <ScalarProperty Name="Problem_category" ColumnName="Problem category" />
+          <ScalarProperty Name="Redundant_" ColumnName="Redundant?" />
+          <ScalarProperty Name="Call_Log_User" ColumnName="Call Log User" />
+          <ScalarProperty Name="Call_Priority" ColumnName="Call Priority" />
+          <ScalarProperty Name="Telephone_No_" ColumnName="Telephone No_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

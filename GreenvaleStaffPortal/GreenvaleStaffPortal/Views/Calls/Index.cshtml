@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GreenvaleStaffPortal.Models.LoggedCall>
+@{
+    ViewBag.Title = "Calls";
+
+    var grid = new WebGrid(Model, 
+        defaultSort: "DateCalled",
+        rowsPerPage: 10);
+}
+
+<div id="grid">
+    @grid.GetHtml(
+        columns: grid.Columns(
+            grid.Column("CallNo", "Call No", format: (item) => Html.ActionLink((string)item.CallNo, "Details", new { id = item.CallNo } )),
+            grid.Column("Company", "Site", format: @<text>@item.DateCalled.ToString("dd MMM yyy")</text>),
+            grid.Column("Caller"),
+            grid.Column("System"),
+            grid.Column("SubSystem", "Sub System"),
+            grid.Column("DateCalled", "Date Reported", format: @<text>@item.DateCalled.ToString("dd MMM yyy")</text>)
+        )
+    )
+</div>

@@ -1,0 +1,25 @@
+﻿@model GreenvaleStaffPortal.Models.LoggedCall
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div id="callDetailsContainer">
+    <fieldset>
+        <legend>Call</legend>
+
+        <div class="display-label">Id</div>
+        <div class="display-field">@Model.CallNo</div>
+
+        <div class="display-label">Notes</div>
+        <div class="display-field">@MvcHtmlString.Create(Html.Encode(Model.CallNotes).Replace("\\", "<br />"))</div>
+
+        <div class="display-label">Time</div>
+        <div class="display-field">@String.Format("{0:g}", Model.CallTime)</div>
+    </fieldset>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GreenvaleStaffPortal.Models.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GreenvaleStaffPortalModelsStoreContainer">
+    <EntitySet Name="LoggedCalls" EntityType="GreenvaleStaffPortal.Models.Store.LoggedCalls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LookupCodes" EntityType="GreenvaleStaffPortal.Models.Store.LookupCodes" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="LoggedCalls">
+    <Key>
+      <PropertyRef Name="CallNo" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="CallNo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="HowMany" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Company" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Caller" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="System" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="SubSystem" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Problem" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Staff" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="DateCalled" Type="datetime" Nullable="false" />
+    <Property Name="TimeCalled" Type="datetime" Nullable="false" />
+    <Property Name="LoggedBy" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="CallNotes" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PassedOn?" Type="tinyint" Nullable="false" />
+    <Property Name="PassedTo" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="PassedToDate" Type="datetime" Nullable="false" />
+    <Property Name="PassedToTime" Type="datetime" Nullable="false" />
+    <Property Name="Solved?" Type="tinyint" Nullable="false" />
+    <Property Name="SolvedBy" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="SolvedDate" Type="datetime" Nullable="false" />
+    <Property Name="SolvedTime" Type="datetime" Nullable="false" />
+    <Property Name="Solved Notes" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Duration in Hours" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="24Hr Support Call" Type="tinyint" Nullable="false" />
+    <Property Name="Category" Type="int" Nullable="false" />
+    <Property Name="Progress Notes" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Ext Company" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Ext Support Call?" Type="tinyint" Nullable="false" />
+    <Property Name="Ext Reference" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Date of 24Hr Call" Type="datetime" Nullable="false" />
+    <Property Name="Time of 24Hr Call" Type="datetime" Nullable="false" />
+    <Property Name="Duration of 24HrCall_Minutes" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Call Duration (Mins)" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="CallMemo" Type="image" />
+    <Property Name="SolvedMemo" Type="image" />
+    <Property Name="ProgressMemo" Type="image" />
+    <Property Name="GV Server" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Call Priority" Type="tinyint" Nullable="false" />
+    <Property Name="Possible Training Required?" Type="tinyint" Nullable="false" />
+    <Property Name="Spares_Repairs Onsite Reqd?" Type="tinyint" Nullable="false" />
+    <Property Name="Development Required?" Type="tinyint" Nullable="false" />
+    <Property Name="Fax Required?" Type="tinyint" Nullable="false" />
+    <Property Name="Fax No_" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="Site Procedures No Followed" Type="tinyint" Nullable="false" />
+    <Property Name="Caller Telephone No_" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Follow Up Reqd?" Type="tinyint" Nullable="false" />
+    <Property Name="Follow Up By" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="Follow Up Completed?" Type="tinyint" Nullable="false" />
+    <Property Name="Follow Up Completed By" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="Follow Up Completion Date" Type="datetime" Nullable="false" />
+    <Property Name="FollowUpMemo" Type="image" />
+    <Property Name="Follow Up Notes" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Call Status" Type="int" Nullable="false" />
+    <Property Name="Master?" Type="tinyint" Nullable="false" />
+    <Property Name="Linked to Master Log No_" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="LookupCodes">
+    <Key>
+      <PropertyRef Name="RecType" />
+      <PropertyRef Name="System" />
+      <PropertyRef Name="SubSystem" />
+      <PropertyRef Name="Problem" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RecType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="System" Type="varchar" Nullable="false" MaxLength="65" />
+    <Property Name="SubSystem" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Problem" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Email Address" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Problem category" Type="int" Nullable="false" />
+    <Property Name="Redundant?" Type="tinyint" Nullable="false" />
+    <Property Name="Call Log User" Type="tinyint" Nullable="false" />
+    <Property Name="Call Priority" Type="tinyint" Nullable="false" />
+    <Property Name="Telephone No_" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+</Schema>
