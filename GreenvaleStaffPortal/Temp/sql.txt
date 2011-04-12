@@ -1,5 +1,0 @@
-SELECT CAST(CAST([DateCalled] AS DATE) AS DATETIME) +
-    CAST([TimeCalled] AS TIME) AS CallTime, *
-FROM [Greenvale AP$Logged Calls] AS C
-WHERE [Solved?] = 0
-ORDER BY [Company], [Combined]

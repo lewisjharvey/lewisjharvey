@@ -1,0 +1,59 @@
+﻿@model List<IEnumerable<GreenvaleStaffPortal.Models.LoggedCall>>
+@{
+    ViewBag.Title = "Summary";
+}
+<div id="counts">
+    @{ 
+        List<GreenvaleStaffPortal.Models.System> systemCounts = new List<GreenvaleStaffPortal.Models.System>();
+
+        var groups =
+            from loggedcall in Model[0]
+            group loggedcall by loggedcall.System into g
+            select new
+            {
+                Key = g.Key,
+                Count = g.Count(),
+                Description = Model[0].First(lookupcode => (lookupcode.System == g.Key)).SystemDescription
+            };
+        
+        var solvedGroups =
+            from loggedcall in Model[1]
+            group loggedcall by loggedcall.System;
+
+        var todayGroups =
+            from loggedcall in Model[2]
+            group loggedcall by loggedcall.System;
+
+        foreach (var group in groups)
+        {
+            systemCounts.Add(new GreenvaleStaffPortal.Models.System(group.Key, group.Description, group.Count, 0, 0));
+        }
+
+        int counter = 0;
+        foreach (var group in solvedGroups)
+        {
+            systemCounts[counter].SolvedCount = group.Count();
+            counter++;
+        }
+
+        counter = 0;
+        foreach (var group in todayGroups)
+        {
+            systemCounts[counter].TodayCount = group.Count();
+            counter++;
+        }
+
+        var countGrid = new WebGrid(systemCounts, canPage: false, canSort: false);
+        @countGrid.GetHtml(
+            columns: countGrid.Columns(
+                countGrid.Column("Name", "", style: "name"),
+                countGrid.Column("Count", "Outstanding", style: "outstanding"),
+                countGrid.Column("TodayCount", "Calls Today", style: "today"),
+                countGrid.Column("SolvedCount", "Solved Today", style: "solved")
+            )
+        )
+    }
+    <p>
+        <a href="#" onclick="self.parent.location.href='http://gvintranet/home/it/helpdesk.aspx';">View outstanding calls.</a>
+    </p>
+</div>
