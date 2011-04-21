@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using GreenvaleStaffPortal.Models;
+using System.Data.SqlClient;
 
 namespace GreenvaleStaffPortal.Controllers
 {
@@ -18,12 +19,19 @@ namespace GreenvaleStaffPortal.Controllers
         {
             List<IEnumerable<LoggedCall>> loggedCallsList = new List<IEnumerable<LoggedCall>>();
             DateTime today = DateTime.Now.Date;
-            var loggedCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.Solved == 0 && loggedCall.Is24Hour == 0)).ToList();
+            var loggedCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.Solved == 0 && loggedCall.Is24Hour == 0 && (loggedCall.System != "" && loggedCall.SubSystem != "" && loggedCall.Problem != ""))).ToList();
             loggedCallsList.Add(loggedCalls);
-            var solvedCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.Solved == 1 && loggedCall.SolvedDate == today && loggedCall.Is24Hour == 0)).ToList();
+            var solvedCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.Solved == 1 && loggedCall.SolvedDate == today && loggedCall.Is24Hour == 0 && (loggedCall.System != "" && loggedCall.SubSystem != "" && loggedCall.Problem != ""))).ToList();
             loggedCallsList.Add(solvedCalls);
-            var todayCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.DateCalled == today && loggedCall.Is24Hour == 0)).ToList();
+            var todayCalls = callsDB.LoggedCalls.Where(loggedCall => (loggedCall.DateCalled == today && loggedCall.Is24Hour == 0 && (loggedCall.System != "" && loggedCall.SubSystem != "" && loggedCall.Problem != ""))).ToList();
             loggedCallsList.Add(todayCalls);
+
+            SqlParameter sqlParameter = new SqlParameter("@UpdateTime", System.Data.SqlDbType.DateTime);
+            sqlParameter.Direction = System.Data.ParameterDirection.Output;
+            callsDB.Database.SqlCommand("SELECT @UpdateTime = last_sync_time FROM MSsubscription_agents WHERE publication = 'CallLogs';", sqlParameter);
+            
+            ViewData["UpdateTime"] = sqlParameter.Value;
+
             return View(loggedCallsList);
         }
         
@@ -39,7 +47,7 @@ namespace GreenvaleStaffPortal.Controllers
             callsDB.EventLog.Add(eventLog);
             callsDB.SaveChanges();
 
-            var loggedCalls = callsDB.LoggedCalls.Where(loggedCall => loggedCall.Solved == 0 && loggedCall.Is24Hour == 0).ToList();
+            var loggedCalls = callsDB.LoggedCalls.Where(loggedCall => loggedCall.Solved == 0 && loggedCall.Is24Hour == 0 && (loggedCall.System != "" && loggedCall.SubSystem != "" && loggedCall.Problem != "")).ToList();
             return View(loggedCalls);
         }
 
