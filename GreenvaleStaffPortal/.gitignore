@@ -1,0 +1,13 @@
+# Only an issue if you're using vi/vim
+.*.swp
+
+# Only an issue if you're using a mac...
+.DS_Store
+
+*.suo
+
+# The pattern is required so that the .gitignore file # added to these directories (to ensure they are tracked # even though they are empty) is not ignored.
+
+log/[^.]*
+tmp/**/[^.]*
+
